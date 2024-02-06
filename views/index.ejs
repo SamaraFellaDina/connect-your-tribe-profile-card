@@ -1,14 +1,50 @@
 <%- include('./partials/head') %>
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
 
-  <p><%= data.name %></p>
+    
+  <article>
+    
+    <header>
 
-  <footer></footer>
-</article>
+      <img src="<%=avatar%>" alt="profielfoto" width="800" height="800">
+      
+      <hgroup>
+      <h1>mijn naam is:</h1>
+
+      <h2> 
+        <%=name%> 
+      </h2>
+
+      <h2>
+        <%=surname%>
+      </h2>
+      </hgroup>
+      
+    </header>
+
+    
+
+  
+    <ul>
+     <li>Op Github heet ik <a href="<%=website%>">@<%= github_handle %></a></li>
+
+    <li>Ik zit in squad <%=squad_id%></li>
+
+     <li>Je kan mijn mailen op: <a href="<%=email%>"><%= email %></a></li>
+    </ul>
+    
+
+  </section>
+
+    <footer>
+
+
+    </footer>
+    
+
+  </article>
+
+  
+
 
 <%- include('./partials/foot') %>
