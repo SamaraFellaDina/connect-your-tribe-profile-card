@@ -1,8 +1,14 @@
 <%- include('./partials/head') %>
 
+  <img class="background" src="images\andrey-haimin-q2Fyzn-KJOQ-unsplash.jpg">
+
+<header>
+  <h1>Welkom bij dit super koele vriendenboekje!</h1>
+</header>
+
 <section>
   <div class="paper-left"> 
-      <img src="<%=avatar%>" alt="profielfoto">
+      <img src="<%=avatar%>" alt="profielfoto" class="profielfoto">
     <h1>Mijn naam is:</h1>
     <p class="naamgeving"><%=name%> <%=prefix%> <%=surname%></p>
     <p class="bio"><%=bio%></p>
@@ -27,7 +33,7 @@
         </svg>
       </a>
       </div>
-      
+
       <div>
         <h2>Mijn email is:</h2>
         <a href="mailto:<%=email%>"><p><%=email%></p></a>
