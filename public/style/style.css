@@ -1,155 +1,92 @@
 
-  /*Geeft een basisstijl met alles met de waarde 'body'*/
-   body {
-    display: flex;
-    justify-content: center; /*zorgt ervoor dat de body gecentreerd staat op de pagina*/
-    align-items: center;
-    height: 100vh;
-    font-family: "Montserrat", sans-serif; 
-    color: #000000;
-    rotate: 2deg; /*zorgt dat het kaartje een 2 graden draait*/
-    margin: 10em; /*zorgt dat er een border zit in de pagina. Hij heeft dus onzichtbare randen waar de content in blijft*/
-    padding-bottom: 2em;
-    background-image: url(https://images.unsplash.com/photo-1576092762791-dd9e2220abd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)
-    
-    
-  }
- 
-  /*Maakt een vak aan in de achtergrond van het beeld*/
-  article {
-    position: relative; 
-    flex-direction: column; /*Zorgt ervoor dat flexibele objecten in het article als een kolom worden geplaatst, elementen kunnen naast elkaar komen te staan als daar ruimte voor is.*/
-    align-items: center; /*Deze items binnen het article gaan gecentreerd staan in het canvas*/
-    justify-content: flex-end;
-    width: 50vw;
-    max-width: 25em;
-    min-width: 20em;
-    border-radius: 0rem;
-    background: rgb(230, 243, 184);
-    box-shadow: 0 0 20px 20px rgba(0,0,2,.2);
-    transition: .25s;
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand-Regular.ttf");
+}
 
-  }
+@font-face {
+  font-family: "Schoolbell";
+  src: url("/fonts/Schoolbell-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/*geeft een stijl met alle tekst met de waarde 'header'*/
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: center /*Zorgt dat de elementen in deze sectie gecentreerd in beeld komen*/
-    gap: 2.5em; /*Zorgt dat de elementen tussen elkaar een kleine ruimte hebben*/
-    text-align: center;/*de tekst word in het midden gecentreerd in plaats van standaard links*/
-
-  }
-
+:root {
+  --background-color: #cfe846;
+  --light-color-1:#fff;
   
-  h1 {
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-    margin: 0%;
-    background-color: rgb(41, 76, 39);
-    letter-spacing: 0.05em; /*ruimte tussen de letters*/
-    width: 110%;
-  }
-  
-/*geeft een stijl met alle tekst met de waarde 'h1'*/
-  h2 {
-    color: rgb(0, 0, 0);
-    text-transform: uppercase; /*zorgt dat de zinnen alleen in kapitalen zijn*/
-    margin: 0%;
-    font-size: 3em;
-    font-family: "Nanum Pen Script", sans-serif;
+  --font-sans-serif: "Quicksand", Helvetica, sans-serif;
+  --font-scripten: "Schoolbell", Helvetica, sans-serif;
+}
 
-  }
+h1, 
+h2,
+h3,
+h4 {
+  font-family: var(--font-sans-serif);
+}
 
-  ul {
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding-right: 2em;
-    padding-left: 2em;
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 0em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+h1{
+  color: #ff0000;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-  }
+h2 {
+font-size: 1.3em;
+}
 
-  #invulling {
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: green;
-    font-family: "Nanum Pen Script", sans-serif;
-    font-size: 1.5em;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    font-weight: 600;
-    
-  }
 
-  footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items:start;
-    justify-content: flex-end;
-    width: 50vw;
-    max-width: 25em;
-    min-width: 20em;
-    border-radius: 0rem;
-    background: rgb(41, 76, 39);
-    transition: .25s;
 
-  }
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  h3 {
-    display: flex;
-    font-size: 1.17em;
-    margin-block-start: 0em;
-    margin-block-end: 1em;
-    font-weight: bold;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-top: 1em;
-    padding-bottom: 0.25em;
-    color: rgb(41, 76, 39);
-    background:rgb(230, 243, 184);
-    letter-spacing: 0.05em;
-    rotate: 357deg;  
-    text-align: left;
-    margin-left: 1em;
-    font-weight: 800;
+section > div {
+  width: 20em;
+  background-color: var(--background-color);
+  padding: 1.5em;
+  box-shadow: inset 0 0 1em #00000036;
+}
 
-  }
+.paper-left {
+border-radius: 1em 0.2em 0.2em 1em ;
+}
 
-  p{
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    color: rgb(230, 243, 184);
-  }
+.paper-right {
+  border-radius: 0.2em 1em 1em 0.2em;
+}
 
-  #fluister{
-    font-family: "Nanum Pen Script", sans-serif;
-    opacity: 80%;
-  }
+img {
+  width: -webkit-fill-available;
+  max-width: 20em;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
 
-/*maakt het canvas + de afbeelding anders.*/ 
-  img {
-    width: 8em;
-    height: auto;
-    border: 0.5em solid #fff;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
-    margin-top: 2em;
-    rotate: 358deg;
-  }
-  
-   a {
-    color: aqua;
-    text-decoration-line: none;
-   }
-  
+p {
+  font-family: var(--font-scripten);
+  font-size: 2em;
+  font-weight: 900;
+  margin-block-start: .3em;
+  margin-block-end: .3em;
+  padding: .3em;
+  background-color: var(--light-color-1);
+}
+
+/* .naamgeving {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  rotate: 1deg;
+  padding: .5em;
+  margin-block-start: .3em;
+  margin-block-end: .3em;
+} */
